@@ -1,0 +1,62 @@
+{
+    "name": "updated",
+    "description": "a good product",
+    "richDescription": "product 1",
+    "image": "product1/image.jpg",
+    "brand":"product 1 brand",
+    "price": 25,
+    "category": "62a75daa4416369070ffaef1",
+    "countInStock":10,
+    "rating":4,
+    "numReviews": 22,
+    "isFeatured": true
+   
+}
+
+v 39 didnt work > productCount inside product.js
+  
+   53
+
+
+
+{
+    "name": "userName1",
+    "email": "amain@gmail.com",
+    "color":"red",
+    "passwordHash": "123456789",
+    "phone": "4410",
+    "isAdmin":"true",
+    "street":"granville",
+    "apartment": "glasgow",
+    "zip": "gr7",
+    "city":"glas",
+    "country":"uk"
+
+
+
+
+{
+    "orderItems": [
+        {
+            "quantity": 3,
+            "product": "62a786b0616e6c96b2d21ffc"
+        },
+        {
+            "quantity": 2,
+            "product": "62a783651140c6fb1dbe43d4"
+        }
+
+    ],
+    "shippingAdress1": "Flowers Street, 45",
+    "shippingAdress2": "1-B",
+    "city":"Prague",
+    "zip":"0000",
+    "country":"USA",
+    "phone":"+9111111111",
+    "user":"62a86662dc39d1e2b06ba2ec"
+
+   
+}
+
+
+prefix and suffex
