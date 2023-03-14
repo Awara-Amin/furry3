@@ -77,9 +77,9 @@ router.get(`/`, async (req, res) => {
 
 // router.post(`${api}/products`, (req, res) => {
 router.put("/:id", uploadOptions.none(), async (req, res) => {
-  console.log("wtaht is coupon tttttttttttttttttttt todayyyyy-1");
-  console.log(req.body.discount);
-  console.log(req.body.isActive);
+  // console.log("wtaht is coupon tttttttttttttttttttt todayyyyy-1");
+  // console.log(req.body.discount);
+  // console.log(req.body.isActive);
 
   // in this case API will return error if we pass wrong id
   // mongoose.isValidObjectId(req.params.id);
@@ -91,8 +91,8 @@ router.put("/:id", uploadOptions.none(), async (req, res) => {
   //   if (!category) return res.status(400).send("Invalid Category");
 
   const coupon = await Coupon.findById(req.params.id);
-  console.log("wtaht is coupon tttttttttttttttttttt");
-  console.log(coupon);
+  // console.log("wtaht is coupon tttttttttttttttttttt");
+  // console.log(coupon);
 
   if (!coupon) return res.status(400).send("Invalid Coupon shekh!");
 

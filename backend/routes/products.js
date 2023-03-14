@@ -47,15 +47,15 @@ router.get(`/`, async (req, res) => {
   if (!productList) {
     res.status(500).json({ success: false });
   }
-  console.log("res.data aaaaaaaaaaaaaaaaaa 1001");
-  console.log(productList);
+  // console.log("res.data aaaaaaaaaaaaaaaaaa 1001");
+  // console.log(productList);
   res.send(productList);
 });
 
 router.get(`/:id`, async (req, res) => {
   // const product = await Product.findById(req.params.id);
-  console.log("thissssssssss is get by id");
-  console.log(req.params.id);
+  // console.log("thissssssssss is get by id");
+  // console.log(req.params.id);
   // video 35 WOW
   const product = await Product.findById(req.params.id).populate("category");
 
@@ -71,8 +71,8 @@ router.post(`/`, uploadOptions.single("image"), async (req, res) => {
   if (!category) return res.status(400).send("Invalid Category");
 
   const file = req.file;
-  console.log("wtaht is fileeeeeeeeeeeee");
-  console.log(file);
+  // console.log("wtaht is fileeeeeeeeeeeee");
+  // console.log(file);
   if (!file) return res.status(400).send("No image in the request");
 
   const fileName = file.filename;
@@ -113,14 +113,14 @@ router.put("/:id", uploadOptions.single("image"), async (req, res) => {
   if (!category) return res.status(400).send("Invalid Category");
 
   const product = await Product.findById(req.params.id);
-  console.log("wtaht is product tttttttttttttttttttt");
-  console.log(product);
-  console.log(product.image);
+  // console.log("wtaht is product tttttttttttttttttttt");
+  // console.log(product);
+  // console.log(product.image);
   if (!product) return res.status(400).send("Invalid Product!");
 
   const file = req.file;
-  console.log("wtaht is fileeeeeeeeeeeee");
-  console.log(file);
+  // console.log("wtaht is fileeeeeeeeeeeee");
+  // console.log(file);
   let imagepath;
 
   if (file) {
@@ -201,14 +201,14 @@ router.put(
   "/gallery-images/:id",
   uploadOptions.array("images", 6),
   async (req, res) => {
-    console.log("req qqqqqqqqqqqqqqqqqqqqqqq");
-    console.log(req);
-    console.log("req qqqqqqqqqqqqqqqqqqqqqqq2");
-    console.log(req.body.data);
-    console.log("req qqqqqqqqqqqqqqqqqqqqqqq3");
-    console.log(req.body.data);
-    console.log(req.body._parts);
-    console.log(req.body.images);
+    // console.log("req qqqqqqqqqqqqqqqqqqqqqqq");
+    // console.log(req);
+    // console.log("req qqqqqqqqqqqqqqqqqqqqqqq2");
+    // console.log(req.body.data);
+    // console.log("req qqqqqqqqqqqqqqqqqqqqqqq3");
+    // console.log(req.body.data);
+    // console.log(req.body._parts);
+    // console.log(req.body.images);
     if (!mongoose.isValidObjectId(req.params.id)) {
       return res.status(400).send("Invalid Product Id");
     }
@@ -246,20 +246,20 @@ router.put(
 
 router.put("/:id/reviews", uploadOptions.none(), async (req, res) => {
   const productId = req.params.id;
-  console.log(req.body.name);
+  // console.log(req.body.name);
   // const obj = req.body.data.name;
   // console.log(req.body.toString());
-  console.log(req.params);
+  // console.log(req.params);
   const product = await Product.findById(productId);
-  console.log("ourrrrrrrr product is ");
-  console.log(product);
+  // console.log("ourrrrrrrr product is ");
+  // console.log(product);
   if (product) {
     if (product.reviews.find((x) => x.name === req.body.name)) {
       return res
         .status(401)
         .send({ message: "You have already submitted a review" });
     }
-    console.log("req.bodyyyyyyyyyyyy 36");
+    // console.log("req.bodyyyyyyyyyyyy 36");
     const review = {
       name: req.body.name,
       // rating: Number(req.body.rating),
@@ -342,15 +342,15 @@ router.put(
   async (req, res) => {
     const productId2 = req.params.id;
     // console.log("req.bodyyyyyyyyyyyy estaaaaaaaaaaaa 20000");
-    console.log(productId2);
+    // console.log(productId2);
 
     const quantity2 = req.params;
     const qtyNew = req.body.qtty;
 
     // console.log("req.bodyyyyyyyyyyyy estaaaaaa2222222 3333333");
-    console.log(qtyNew);
+    // console.log(qtyNew);
 
-    console.log(req.params);
+    // console.log(req.params);
     // console.log("req.paramsssssssssss");
     const product = await Product.findById(productId2);
 
@@ -382,12 +382,12 @@ router.put(
     // const obj = req.body.data.name;
     // console.log(req.body.toString());
     // console.log(obj);
-    console.log("nothing is sent to here through formData!");
-    console.log(req.params);
-    console.log("req.paramsssssssssss");
+    // console.log("nothing is sent to here through formData!");
+    // console.log(req.params);
+    // console.log("req.paramsssssssssss");
     const product = await Product.findById(productId);
-    console.log("ourrrrrrrr product is ");
-    console.log(product);
+    // console.log("ourrrrrrrr product is ");
+    // console.log(product);
 
     if (product) {
       // if (product.reviews.find((x) => x.name === req.body.name)) {

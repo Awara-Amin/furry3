@@ -22,7 +22,7 @@ router.post(`/:id`, async (req, res) => {
     }
 
     // console.log(favoriteProduct);
-    console.log("favoriteys kaka");
+    // console.log("favoriteys kaka");
     // const productId = favoriteProduct._id;
     // const name = favoriteProduct.name;
     // const image = favoriteProduct.image;
@@ -60,10 +60,10 @@ router.get("/find/:userId", async (req, res) => {
 // DELETE Fav product
 router.delete("/:id", async (req, res) => {
   const productId = req.params.id;
-  console.log("11");
-  console.log(productId);
-  console.log("13");
-  console.log(Object.keys(Favcard).length);
+  // console.log("11");
+  // console.log(productId);
+  // console.log("13");
+  // console.log(Object.keys(Favcard).length);
   // const productFav = await Favcard.favorateProducts.find(
   //   (x) => x.productId === productId
   // );
@@ -75,8 +75,8 @@ router.delete("/:id", async (req, res) => {
   //   favorateProducts: { productId: productId },
   // });
 
-  console.log("12");
-  console.log(productFav);
+  // console.log("12");
+  // console.log(productFav);
   const favoriteCart = await Favcard.findByIdAndRemove(productId);
   // const favoriteCart = await Favcard.findByIdAndRemove.find((x) => x.productId === productId)){
   //   return res
@@ -84,7 +84,7 @@ router.delete("/:id", async (req, res) => {
   //   .send({ message: "You have already submitted a review" });
   // }
 
-  console.log("14");
+  // console.log("14");
   // console.log(favoriteCart);
   if (favoriteCart) {
     res.send({
