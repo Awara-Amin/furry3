@@ -62,7 +62,7 @@ mongoose
     dbName: "ecomerce-mobile-app",
   })
   .then(() => {
-    console.log("Database Conection has been successful kaka ...");
+    console.log("Database Conection has been successful kaka2023- ...");
   })
   .catch((err) => {
     console.log(err);
